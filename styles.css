@@ -8,7 +8,8 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    color: #333;
+    color: #e0e0e0;
+    background-color: #1a1a1a;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
@@ -16,12 +17,16 @@ body {
 
 a {
     text-decoration: none;
-    color: #1a73e8;
+    color: yellowgreen;
+}
+
+a:hover {
+    color: limegreen;
 }
 
 /* Header styles */
 header {
-    background-color: #f8f9fa;
+    background-color: #2a2a2a;
     padding: 20px 0;
     margin-bottom: 30px;
 }
@@ -34,7 +39,7 @@ nav {
 
 nav h1 {
     font-size: 24px;
-    color: #1a73e8;
+    color: yellowgreen;
 }
 
 nav ul {
@@ -64,12 +69,12 @@ section {
 h2 {
     font-size: 24px;
     margin-bottom: 20px;
-    color: #1a73e8;
+    color: yellowgreen;
 }
 
 article {
-    background-color: #fff;
-    border: 1px solid #e0e0e0;
+    background-color: #2a2a2a;
+    border: 1px solid #3a3a3a;
     border-radius: 5px;
     padding: 20px;
     margin-bottom: 20px;
@@ -78,6 +83,7 @@ article {
 article h3 {
     font-size: 20px;
     margin-bottom: 10px;
+    color: limegreen;
 }
 
 article p {
@@ -90,7 +96,7 @@ aside {
 }
 
 #about-me, #categories {
-    background-color: #f8f9fa;
+    background-color: #2a2a2a;
     border-radius: 5px;
     padding: 20px;
     margin-bottom: 30px;
@@ -108,11 +114,35 @@ aside {
 footer {
     text-align: center;
     padding: 20px 0;
-    background-color: #f8f9fa;
+    background-color: #2a2a2a;
     margin-top: 40px;
 }
 
+/* ... (keep all the existing styles above) ... */
+
 /* Responsive design */
+@media (max-width: 1200px) {
+    body {
+        max-width: 95%;
+    }
+}
+
+@media (max-width: 992px) {
+    #featured-post, #recent-posts {
+        width: 100%;
+    }
+
+    aside {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #about-me, #categories {
+        width: 48%;
+    }
+}
+
 @media (max-width: 768px) {
     nav {
         flex-direction: column;
@@ -120,9 +150,59 @@ footer {
 
     nav ul {
         margin-top: 20px;
+        flex-direction: column;
+        align-items: center;
     }
 
-    #featured-post, #recent-posts, aside {
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    aside {
+        flex-direction: column;
+    }
+
+    #about-me, #categories {
         width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    body {
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    article {
+        padding: 15px;
+    }
+}
+
+/* Add a hamburger menu for mobile */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+        font-size: 24px;
+        color: yellowgreen;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    nav ul.show {
+        display: flex;
     }
 }
