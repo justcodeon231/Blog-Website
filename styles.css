@@ -10,7 +10,7 @@ body {
     line-height: 1.6;
     color: #e0e0e0;
     background-color: #1a1a1a;
-    max-width: 1200px;
+    max-width: 100%;
     margin: 0 auto;
     padding: 0 20px;
 }
@@ -118,9 +118,79 @@ footer {
     margin-top: 40px;
 }
 
-/* ... (keep all the existing styles above) ... */
+/* Contact form styles */
+#contact {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: #2a2a2a;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+#contact h2 {
+    text-align: center;
+    color: yellowgreen;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    color: #e0e0e0;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #3a3a3a;
+    border-radius: 5px;
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: limegreen;
+    outline: none;
+}
+
+button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: yellowgreen;
+    color: #1a1a1a;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button[type="submit"]:hover {
+    background-color: limegreen;
+}
 
 /* Responsive design */
+@media (min-width: 1600px) {
+    body {
+        max-width: 1400px;
+    }
+
+    #featured-post, #recent-posts {
+        width: 70%;
+    }
+
+    aside {
+        width: 25%;
+    }
+}
+
 @media (max-width: 1200px) {
     body {
         max-width: 95%;
